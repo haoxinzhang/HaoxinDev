@@ -1,0 +1,32 @@
+<h1>Restful Http CLient Test: Data from JsonPlaceHolder</h1>
+
+<button (click)="getPosts()">getPosts</button>
+
+<div >
+
+    <table  id="id1">
+        <tr>
+            <td>ID</td>
+            <td>UserId</td>
+            <td>Title</td>
+            <td>Contents</td>
+        </tr>
+
+        <tr *ngFor="let user of userDataSource | async">
+            <td>{{user.id}}</td>
+            <td>{{user.userId}}</td>
+            <td>{{user.title}}</td>
+            <td>{{user.body}}</td>
+        </tr>
+
+    </table>
+</div>
+
+<!-- <div *ngFor="let user of userDataSource | async">
+    {{user.id}}
+    {{user.userId}}
+    {{user.title}}
+    {{user.body}}
+</div> -->
+
+<router-outlet></router-outlet>
